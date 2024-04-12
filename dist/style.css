@@ -137,3 +137,43 @@ h6 {
   color: black;
   font-size: 3rem;
 }
+
+.icons button {
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+.icons button:hover {
+  color: grey;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  gap: 65px;
+  justify-items: center;
+  padding: 30px;
+}
+
+.project img {
+  width: 520px;
+  height: 380px;
+}
+
+.project-details {
+  height: 250px;
+  padding: 20px 40px;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title h2 {
+  font-size: 26px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
