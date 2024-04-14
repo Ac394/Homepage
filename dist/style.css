@@ -73,8 +73,8 @@ h6 {
   right: 0;
   bottom: 0;
   background-color: #0891b2;
-  height: 750px;
-  transform: skewY(348deg);
+  height: 100vh;
+  transform: skewY(347deg);
   transform-origin: 0% 0;
   box-shadow: hwb(0 0% 100% / 0.3) 4px 4px 12px 0px;
   z-index: -1;
@@ -83,7 +83,7 @@ h6 {
 .about-cnt {
   display: flex;
   align-items: center;
-  margin: 60px 120px;
+  margin: 3.1vw 6.2vw;
 }
 
 .profile-image {
@@ -94,7 +94,7 @@ h6 {
 
 .profile-image img {
   max-width: 33vw;
-  height: 35vw;
+  height: 39vw;
   object-fit: cover;
   box-shadow: hwb(0 0% 100% / 0.3) 4px 4px 12px 0px;
 }
@@ -109,17 +109,17 @@ h6 {
 }
 
 .about-me {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   background-color: hsl(0, 0%, 100%);
   padding: 2.5vw 2.5vw 2.5vw 2vw;
-  gap: 1vw;
+  /* gap: 1vw; */
   box-shadow: hwb(0 0% 100% / 0.3) 4px 4px 12px 0px;
 }
 
 .about-me h1 {
   color: black;
-  font-size: calc(1rem + 2vw);
+  font-size: 3vw;
   font-family: "Playfair Display", serif;
   font-weight: 400;
 }
@@ -127,15 +127,18 @@ h6 {
 .about-me p {
   color: #505050;
   font-family: "Roboto", sans-serif;
-  font-size: calc(1rem + 1vw);
+  font-size: 1.8vw;
+  padding-top: 1vw;
 }
 
 .about-me .icons {
   display: flex;
+  justify-content: flex-end;
   gap: 2vw;
   align-self: end;
   color: black;
-  font-size: 3rem;
+  font-size: 2.5vw;
+  padding-top: 5vw;
 }
 
 .icons button {
@@ -143,23 +146,38 @@ h6 {
   appearance: none;
   background: none;
   border: none;
+  line-height: 0;
 }
 
 .icons button:hover {
-  color: grey;
+  opacity: 50%;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 65px;
   justify-items: center;
-  padding: 30px;
+  padding: 15px 120px;
+}
+
+main h1 {
+  font-size: 56px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  padding-top: 150px;
+  padding-left: 120px;
+}
+
+.project {
+  width: 100%;
+  box-shadow: hwb(0 0% 100% / 0.3) 4px 4px 12px 0px;
 }
 
 .project img {
-  width: 520px;
+  width: 100%;
   height: 380px;
+  object-fit: cover;
 }
 
 .project-details {
@@ -170,10 +188,217 @@ h6 {
 .project-title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .project-title h2 {
-  font-size: 26px;
+  font-size: 32px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
+}
+
+.project-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.project-icons button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.project-icons button:hover {
+  opacity: 50%;
+}
+
+.project-icons i,
+.project-icons span {
+  font-size: 32px;
+}
+
+.project p {
+  color: #505050;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 30px 0px;
+}
+
+footer {
+  display: flex;
+  margin-top: 170px;
+  background-color: #0891b2;
+  height: 100vh;
+  padding: 95px 125px;
+  gap: 80px;
+}
+
+footer img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  color: white;
+  line-height: 1.2;
+  width: 45%;
+}
+
+.contact-details h1 {
+  font-size: 56px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.contact-details p {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-details span {
+  font-size: 48px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-info .phone,
+.contact-info .mail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-details button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.contact-details button:hover {
+  opacity: 50%;
+}
+
+.contact-details .icons {
+  display: flex;
+  gap: 50px;
+  font-size: 60px;
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .about-cnt {
+    display: block;
+    margin: 0 11vw;
+  }
+
+  .about-cnt::before {
+    height: 72vh;
+  }
+
+  .profile-image {
+    float: left;
+    margin-right: 2vw;
+    margin-top: -12vw;
+    margin-left: -6vw;
+  }
+
+  .about-me {
+    margin-top: 18vw;
+    padding: 11vw 2.5vw 10vw 2vw;
+  }
+
+  .about-me h1 {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+
+  .about-me p {
+    font-size: 2.3vw;
+  }
+
+  .about-me .icons {
+    display: none;
+  }
+
+  .profile-image img {
+    max-width: 46vw;
+    height: 50vw;
+  }
+
+  .profile-image p {
+    width: 100%;
+    font-size: 6.5vw;
+    left: 40vw;
+    top: 0;
+  }
+
+  main h1 {
+    font-size: 5vw;
+    padding-top: 7vw;
+    padding-left: 85px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    padding: 15px 85px;
+    gap: 45px;
+  }
+
+  .project img {
+    height: 255px;
+  }
+
+  .project-details {
+    height: 170px;
+    padding: 15px 25px;
+  }
+
+  .project-title h2 {
+    font-size: 24px;
+  }
+
+  .project-icons {
+    gap: 20px;
+  }
+
+  .project-icons span,
+  .project-icons i {
+    font-size: 23px;
+  }
+
+  .project p {
+    font-size: 16px;
+    padding: 15px 0px;
+  }
+
+  .contact-details {
+    justify-content: center;
+  }
+
+  .contact-details h1 {
+    font-size: 46px;
+  }
+
+  .contact-details p {
+    font-size: 18px;
+  }
+
+  .contact-details span {
+    font-size: 27px;
+  }
+
+  .contact-details .icons {
+    font-size: 40px;
+  }
 }
