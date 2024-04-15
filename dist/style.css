@@ -213,8 +213,9 @@ main h1 {
 }
 
 .project-details {
+  background-color: white;
   height: 250px;
-  padding: 20px 40px;
+  padding: 20px min(40px, 2vw);
 }
 
 .project-title {
@@ -260,10 +261,11 @@ main h1 {
 
 footer {
   display: flex;
+  justify-content: center;
   margin-top: 170px;
   background-color: #0891b2;
-  height: 100vh;
-  padding: 95px 125px;
+  height: min(100vh, 50vw);
+  padding: 5vw clamp(65px, 6.2vw, 120px);
   gap: 80px;
 }
 
@@ -275,25 +277,25 @@ footer img {
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: min(45px, 4vw);
   color: white;
   line-height: 1.2;
   width: 45%;
 }
 
 .contact-details h1 {
-  font-size: 56px;
+  font-size: clamp(32px, 4.5vw, 56px);
   font-family: "Playfair Display", serif;
   font-weight: 400;
 }
 
 .contact-details p {
-  font-size: 30px;
+  font-size: clamp(18px, 1.5vw, 32px);
   font-family: "Roboto", sans-serif;
 }
 
 .contact-details span {
-  font-size: 48px;
+  font-size: 4.5vw;
 }
 
 .contact-info {
@@ -324,7 +326,7 @@ footer img {
 .contact-details .icons {
   display: flex;
   gap: 50px;
-  font-size: 60px;
+  font-size: clamp(36px, 3.2vw, 60px);
   color: black;
 }
 
@@ -335,7 +337,7 @@ footer img {
   }
 
   .about-cnt::before {
-    height: 72vh;
+    height: min(72vh, 60vw);
   }
 
   .profile-image {
@@ -356,7 +358,7 @@ footer img {
   }
 
   .about-me p {
-    font-size: 2.3vw;
+    font-size: max(2.3vw, 16px);
   }
 
   .about-me .icons {
@@ -375,24 +377,26 @@ footer img {
     top: 0;
   }
 
+  main {
+    padding: 0 clamp(65px, 11vw, 120px);
+  }
+
   main h1 {
     font-size: 5vw;
     padding-top: 7vw;
-    padding-left: 85px;
   }
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    padding: 15px 85px;
     gap: 45px;
   }
 
   .project img {
-    height: 255px;
+    height: min(255px, 25vw);
   }
 
   .project-details {
-    height: 170px;
+    height: min(170px, 20vw);
     padding: 15px 25px;
   }
 
@@ -414,23 +418,131 @@ footer img {
     padding: 15px 0px;
   }
 
+  footer {
+    height: max(50vh, 500px);
+    gap: 35px;
+  }
+
   .contact-details {
-    justify-content: center;
-  }
-
-  .contact-details h1 {
-    font-size: 46px;
-  }
-
-  .contact-details p {
-    font-size: 18px;
+    width: 100%;
   }
 
   .contact-details span {
-    font-size: 27px;
+    font-size: clamp(27px, 4.5vw, 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-cnt::before {
+    height: 520px;
+    transform: skewY(340deg);
+  }
+
+  .about-cnt {
+    margin: 15px 35px;
+  }
+
+  .profile-image {
+    margin: 0;
+    float: unset;
+    align-items: flex-end;
+  }
+
+  .profile-image img {
+    height: 520px;
+    max-width: 325px;
+  }
+
+  .profile-image p {
+    line-height: 1.2;
+    font-size: 62px;
+    left: unset;
+    top: unset;
+    bottom: unset;
+    padding-left: 10px;
+  }
+
+  .about-me {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .about-me h1 {
+    font-size: 14vw;
+  }
+
+  .about-me p {
+    font-size: 6vw;
+  }
+
+  .about-me .icons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  main {
+    padding: 0px 35px;
+  }
+
+  main h1 {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .project {
+    width: 350px;
+  }
+
+  .project img {
+    height: 295px;
+  }
+
+  .project p {
+    font-size: 18px;
+  }
+
+  .project-details {
+    padding: 10px 30px;
+    height: 195px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    gap: 0;
+  }
+
+  .contact-details {
+    padding: 35px 20px;
+    padding-bottom: 70px;
+    gap: 25px;
+  }
+
+  .contact-details h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .contact-details > p:first-of-type {
+    font-size: 24px;
+  }
+
+  .contact-info span {
+    display: none;
   }
 
   .contact-details .icons {
     font-size: 40px;
+    justify-content: center;
+  }
+
+  footer img {
+    width: 100%;
+    object-fit: cover;
+    height: 20vh;
   }
 }
