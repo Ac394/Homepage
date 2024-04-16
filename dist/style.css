@@ -129,7 +129,6 @@ h6 {
   color: #505050;
   font-family: "Roboto", sans-serif;
   font-size: clamp(16px, 1.8vw, 36px);
-  /* font-size: 1.8vw; */
   padding-top: 1vw;
 }
 
@@ -186,19 +185,11 @@ main {
   padding: 15px 0;
 }
 
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 65px;
-  justify-items: center;
-  padding: 15px 120px;
-} */
-
 main h1 {
   font-size: 56px;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  padding-top: 150px;
+  padding-top: max(150px, 30vh);
 }
 
 .project {
@@ -295,7 +286,7 @@ footer img {
 }
 
 .contact-details span {
-  font-size: 4.5vw;
+  font-size: clamp(24px, 4.5vw, 48px);
 }
 
 .contact-info {
